@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't Panic Ipsum | A hitchhiker's guide to placeholder text</title>
+
+</head>
+<body>
+    <main>
+        <form method="GET" id="settings">
+            <label for="paragraphs">How many paragraphs?</label>
+            <input type="range" name="paragraphs" id="paragraphs" value="3" min="1" max="10" required>
+            <label for="quotesPerParagraph">How many quotes per paragraph?</label>
+            <input type="range" name="quotesPerParagraph" id="quotesPerParagraph" value="5" min="1" max="10" step="1" required>
+        </form>
+        <textarea name="output" id="output" cols="80" rows="50" readonly></textarea>
+    </main>
+
+
+    <script src="Quotes.min.js" type="module" defer></script>
+    <script src="ArrayHelpers.js" type="module" defer></script>
+    <script src="main.js" type="module" defer></script>
+</body>
+</html>
