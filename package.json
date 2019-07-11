@@ -1,0 +1,31 @@
+{
+  "name": "dont-panic-ipsum",
+  "version": "0.1.0",
+  "description": "A placeholder text generator using quotes from A Hitchhiker's Guide to the Galaxy.",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server web/ -S -C cert.pem",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoritzLost/DontPanicIpsum.git"
+  },
+  "keywords": [
+    "lorem ipsum",
+    "hitchhikers guide to the galaxy",
+    "filler text",
+    "dummy text",
+    "blind text"
+  ],
+  "author": "MoritzLost <info@herebedragons.world>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/MoritzLost/DontPanicIpsum/issues"
+  },
+  "homepage": "https://github.com/MoritzLost/DontPanicIpsum#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}

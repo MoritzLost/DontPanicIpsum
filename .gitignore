@@ -1,0 +1,6 @@
+# Dependencies
+node_modules/
+
+# Certificates for local dev server
+cert.pem
+key.pem
