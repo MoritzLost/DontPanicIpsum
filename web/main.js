@@ -44,6 +44,7 @@ const refreshQuotesDisplay = () => {
         ? QuotesData.quotes
         : QuotesData.quotes.filter(q => q.book !== 6);
 
+    // if a maximum length is set, filter out all longer quotes
     const maximumQuoteLength = Number(form.querySelector('[name="maximumQuoteLength"]').value);
     const lowerBoundOfMaximum = Number(form.querySelector('[name="maximumQuoteLength"]').min);
     if (maximumQuoteLength >= lowerBoundOfMaximum) {
