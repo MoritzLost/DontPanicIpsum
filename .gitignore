@@ -4,3 +4,7 @@ node_modules/
 # Certificates for local dev server
 cert.pem
 key.pem
+
+# Compiled CSS
+web/main.css
+web/main.css.map

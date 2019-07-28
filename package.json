@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server web/ -S -C cert.pem",
+    "watch": "node-sass --watch src/sass --output-style expanded --source-map true --output web",
+    "build": "node-sass src/sass --output-style compressed --omit-source-map-url --output web",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +28,8 @@
   "homepage": "https://github.com/MoritzLost/DontPanicIpsum#readme",
   "dependencies": {},
   "devDependencies": {
-    "http-server": "^0.11.1"
+    "bootstrap": "^4.3.1",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.12.0"
   }
 }

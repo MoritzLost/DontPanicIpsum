@@ -3,68 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Don't Panic Ipsum | A hitchhiker's guide to placeholder text</title>
+    <title>Don't Panic Ipsum | A Hitchhiker's Guide to placeholder text</title>
 
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <main>
-        <form method="GET" id="settings">
-            <label for="paragraphs">How many paragraphs?</label>
-            <input type="range" name="paragraphs" id="paragraphs" value="3" min="1" max="10" required>
+    <main class="container">
+        <header class="mb-4">
+            <h1>Don't Panic Ipsum</h1>
+            <p>A Hitchhiker's Guide to placeholder text</p>
+        </header>
+        <div class="row flex-row-reverse">
+            <form method="GET" id="settings" class="col-md-7">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="paragraphs">How many paragraphs?</label>
+                        <input type="number" name="paragraphs" id="paragraphs" value="3" min="1" max="10" required class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="quotesPerParagraph">How many quotes per paragraph?</label>
+                        <input type="number" name="quotesPerParagraph" id="quotesPerParagraph" value="5" min="1" max="10" step="1" required class="form-control">
+                    </div>
+                </div>
 
-            <label for="quotesPerParagraph">How many quotes per paragraph?</label>
-            <input type="range" name="quotesPerParagraph" id="quotesPerParagraph" value="5" min="1" max="10" step="1" required>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="maximumQuoteLength">Maximum length for individual quotes</label>
+                        <input type="number" min="50" name="maximumQuoteLength" id="maximumQuoteLength" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="wrap">Wrap paragraphs in …</label>
+                        <select name="wrap" id="wrap" class="custom-select">
+                            <option value="">None</option>
+                            <option value="p">&lt;p&gt;</option>
+                            <option value="li">&lt;li&gt;</option>
+                        </select>
+                    </div>
+                </div>
 
-            <input type="checkbox" name="includeSpinoff" id="includeSpinoff" value="includeSpinoff" checked>
-            <label for="includeSpinoff">Include "And Another Thing..." by Eoin Colfer</label>
+                <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" name="includeSpinoff" id="includeSpinoff" value="includeSpinoff" checked class="custom-control-input">
+                        <label for="includeSpinoff" class="custom-control-label">Include “And Another Thing...” by Eoin Colfer</label>
+                    </div>
+                </div>
 
-            <label for="wrap">Wrap paragraphs in …</label>
-            <select name="wrap" id="wrap">
-                <option value="">None</option>
-                <option value="p">&lt;p&gt;</option>
-                <option value="li">&lt;li&gt;</option>
-            </select>
+                <div class="form-group">
+                    <label for="start">Start with …</label>
+                    <select name="start" id="start" required class="custom-select">
+                        <option value="random" selected>
+                            Random
+                        </option>
+                        <option value="“Forty-two,” said Deep Thought, with infinite majesty and calm.">
+                            “Forty-two,” said Deep Thought …
+                        </option>
+                        <option value="In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move.">
+                            In the beginning the Universe was created …
+                        </option>
+                        <option value="The storm had now definitely abated, and what thunder there was now grumbled over more distant hills, like a man saying “And another thing…” twenty minutes after admitting he’d lost the argument.">
+                            The storm had now definitely abated …
+                        </option>
+                        <option value="“Life,” he said, “is like a grapefruit.”">
+                            “Life,” he said, “is like a grapefruit.”
+                        </option>
+                        <option value="A robot was programmed to believe that it liked herring sandwiches.">
+                            A robot was programmed to believe …
+                        </option>
+                        <option value="A common mistake that people make when trying to design something completely foolproof was to underestimate the ingenuity of complete fools.">
+                            A common mistake that people make …
+                        </option>
+                        <option value="At the center of an uncertain and possibly illusory universe there would always be tea.">
+                            At the center of an uncertain and possibly …
+                        </option>
+                        <option value="Dreams come true all the time, just not for the dreamers.">
+                            Dreams come true all the time …
+                        </option>
+                        <option value="“The Hitchhiker’s Guide is a hundred percent accurate. Reality, however, is not as reliable.”">
+                            “The Hitchhiker’s Guide is a hundred percent accurate …
+                        </option>
+                    </select>
+                </div>
 
-            <label for="start">Start with …</label>
-            <select name="start" id="start" required>
-                <option value="random" selected>
-                    Random
-                </option>
-                <option value="“Forty-two,” said Deep Thought, with infinite majesty and calm.">
-                    “Forty-two,” said Deep Thought …
-                </option>
-                <option value="In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move.">
-                    In the beginning the Universe was created …
-                </option>
-                <option value="The storm had now definitely abated, and what thunder there was now grumbled over more distant hills, like a man saying “And another thing…” twenty minutes after admitting he’d lost the argument.">
-                    The storm had now definitely abated …
-                </option>
-                <option value="“Life,” he said, “is like a grapefruit.”">
-                    “Life,” he said, “is like a grapefruit.”
-                </option>
-                <option value="A robot was programmed to believe that it liked herring sandwiches.">
-                    A robot was programmed to believe …
-                </option>
-                <option value="A common mistake that people make when trying to design something completely foolproof was to underestimate the ingenuity of complete fools.">
-                    A common mistake that people make …
-                </option>
-                <option value="At the center of an uncertain and possibly illusory universe there would always be tea.">
-                    At the center of an uncertain and possibly …
-                </option>
-                <option value="Dreams come true all the time, just not for the dreamers.">
-                    Dreams come true all the time …
-                </option>
-                <option value="“The Hitchhiker’s Guide is a hundred percent accurate. Reality, however, is not as reliable.”">
-                    “The Hitchhiker’s Guide is a hundred percent accurate …
-                </option>
-            </select>
+                <button type="submit" class="btn btn-primary btn-lg">Refresh generated quotes</button>
+            </form>
 
-            <label for="maximumQuoteLength">Maximum length for individual quotes</label>
-            <input type="number" min="50" name="maximumQuoteLength" id="maximumQuoteLength">
-
-            <button type="submit">Refresh generated quotes</button>
-        </form>
-        <textarea name="output" id="output" cols="80" rows="50" readonly></textarea>
+            <div class="col-md-5">
+                <textarea name="output" id="output" rows="25" readonly class="form-control w-100"></textarea>
+            </div>
+        </div>
     </main>
 
 
