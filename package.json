@@ -6,7 +6,9 @@
   "scripts": {
     "start": "http-server web/ -S -C cert.pem",
     "watch": "node-sass --watch src/sass --output-style expanded --source-map true --output web",
-    "build": "node-sass src/sass --output-style compressed --omit-source-map-url --output web",
+    "compile": "node-sass src/sass --output-style compressed --omit-source-map-url --output web",
+    "pull-quotes": "node scripts/PullQuotes.js > web/Quotes.min.js",
+    "build": "npm run pull-quotes && npm run compile",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
