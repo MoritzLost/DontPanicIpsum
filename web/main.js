@@ -74,6 +74,23 @@ const refreshQuotesDisplay = () => {
     // convert the quotes to the final text and display it
     const quotesText = quotesGroupsToText(selectedQuotes, wrapStart, wrapEnd);
     document.getElementById('output').value = quotesText;
+
+    // set output info
+    const sourceList = document.getElementById('quote-sources');
+    while (sourceList.firstChild) {
+        sourceList.removeChild(sourceList.firstChild);
+    }
+    const sourceInfo = selectedQuotes.flat().map(({quote, book, page}) => {
+        const bookTitle = QuotesData.books[book];
+        return `<blockquote><strong>${quote}</strong><br>
+            <cite>${bookTitle}, page ${page}</cite></blockquote>`;
+    });
+    console.log(sourceInfo);
+    sourceInfo.map(text => {
+        const li = document.createElement('li');
+        li.innerHTML = text;
+        return li;
+    }).forEach(li => sourceList.appendChild(li));
 }
 
 // render the quotes on initial page load

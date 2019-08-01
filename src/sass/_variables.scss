@@ -1,0 +1,56 @@
+// Colors
+
+$white: #fff;
+$black: #07080e;
+
+$lime: #54da3d;
+$green: #3cd32e;
+$cyan: #49abdc;
+$blue: #235b9d;
+$midnight: #163661;
+$beige: #f9f9eb;
+
+$colors: (
+    "lime": $lime,
+    "midnight": $midnight,
+    "beige": $beige
+);
+
+$primary: $cyan;
+$secondary: $lime;
+$info: $blue;
+
+$yiq-text-dark:             $black;
+
+
+// Options
+
+// $enable-shadows:                true;
+// $enable-gradients:              true;
+$enable-responsive-font-sizes:  true;
+
+
+// Body
+
+$body-bg: $midnight;
+$body-color: $white;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                              inherit;
+$link-decoration:                         underline;
+$link-hover-color:                        $secondary;
+$link-hover-decoration:                   underline !default;
+
+
+// Forms
+
+$input-bg: $white;
+$input-disabled-bg: $input-bg;
+
+$input-color: $midnight;
+
+
+$form-group-margin-bottom:              1.5rem;

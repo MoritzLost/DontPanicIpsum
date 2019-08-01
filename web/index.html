@@ -9,93 +9,107 @@
 </head>
 <body>
     <main class="container">
-        <header class="mb-4">
-            <h1>Don't Panic Ipsum</h1>
-            <p>A Hitchhiker's Guide to placeholder text</p>
+        <header class="header">
+            <h1 class="header__headline">Don't Panic Ipsum</h1>
+            <p class="header__subline">A Hitchhiker's Guide to placeholder text.</p>
         </header>
         <div class="row flex-row-reverse">
-            <form method="GET" id="settings" class="col-md-7">
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="paragraphs">How many paragraphs?</label>
-                        <input type="number" name="paragraphs" id="paragraphs" value="3" min="1" max="10" required class="form-control">
+            <div class="col-md-6 col-lg-7">
+                <p>This is a blindtext generator using quotes from Douglas Adams' <em><a href="https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy" target="_blank" rel="noopener noreferrer">Hitchhiker's Guide to the Galaxy</a></em>. There are over 200 quotes from books one through five as well as one short story and the sequel by Eoin Colfer, <em><a href="https://en.wikipedia.org/wiki/And_Another_Thing..._(novel)" target="_blank" rel="noopener noreferrer">And Another Thing&hellip;</a></em>.</p>
+                <p></p>
+                <form method="GET" id="settings">
+                    <div class="form-row">
+                        <div class="form-group col-lg-6">
+                            <label for="paragraphs">How many paragraphs?</label>
+                            <input type="number" name="paragraphs" id="paragraphs" value="3" min="1" max="10" required class="form-control">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="quotesPerParagraph">How many quotes per paragraph?</label>
+                            <input type="number" name="quotesPerParagraph" id="quotesPerParagraph" value="5" min="1" max="10" step="1" required class="form-control">
+                        </div>
                     </div>
-                    <div class="form-group col-md-6">
-                        <label for="quotesPerParagraph">How many quotes per paragraph?</label>
-                        <input type="number" name="quotesPerParagraph" id="quotesPerParagraph" value="5" min="1" max="10" step="1" required class="form-control">
+    
+                    <div class="form-row">
+                        <div class="form-group col-lg-6">
+                            <label for="maximumQuoteLength">Maximum length for individual quotes</label>
+                            <input type="number" min="50" name="maximumQuoteLength" id="maximumQuoteLength" class="form-control">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="wrap">Wrap paragraphs in …</label>
+                            <select name="wrap" id="wrap" class="custom-select">
+                                <option value="">None</option>
+                                <option value="p">&lt;p&gt;</option>
+                                <option value="li">&lt;li&gt;</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="maximumQuoteLength">Maximum length for individual quotes</label>
-                        <input type="number" min="50" name="maximumQuoteLength" id="maximumQuoteLength" class="form-control">
+    
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="includeSpinoff" id="includeSpinoff" value="includeSpinoff" checked class="custom-control-input">
+                            <label for="includeSpinoff" class="custom-control-label">Include “And Another Thing...” by Eoin Colfer</label>
+                        </div>
                     </div>
-                    <div class="form-group col-md-6">
-                        <label for="wrap">Wrap paragraphs in …</label>
-                        <select name="wrap" id="wrap" class="custom-select">
-                            <option value="">None</option>
-                            <option value="p">&lt;p&gt;</option>
-                            <option value="li">&lt;li&gt;</option>
+    
+                    <div class="form-group">
+                        <label for="start">Start with …</label>
+                        <select name="start" id="start" required class="custom-select">
+                            <option value="random" selected>
+                                Random
+                            </option>
+                            <option value="“Forty-two,” said Deep Thought, with infinite majesty and calm.">
+                                “Forty-two,” said Deep Thought …
+                            </option>
+                            <option value="In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move.">
+                                In the beginning the Universe was created …
+                            </option>
+                            <option value="The storm had now definitely abated, and what thunder there was now grumbled over more distant hills, like a man saying “And another thing…” twenty minutes after admitting he’d lost the argument.">
+                                The storm had now definitely abated …
+                            </option>
+                            <option value="“Life,” he said, “is like a grapefruit.”">
+                                “Life,” he said, “is like a grapefruit.”
+                            </option>
+                            <option value="A robot was programmed to believe that it liked herring sandwiches.">
+                                A robot was programmed to believe …
+                            </option>
+                            <option value="A common mistake that people make when trying to design something completely foolproof was to underestimate the ingenuity of complete fools.">
+                                A common mistake that people make …
+                            </option>
+                            <option value="At the center of an uncertain and possibly illusory universe there would always be tea.">
+                                At the center of an uncertain and possibly …
+                            </option>
+                            <option value="Dreams come true all the time, just not for the dreamers.">
+                                Dreams come true all the time …
+                            </option>
+                            <option value="“The Hitchhiker’s Guide is a hundred percent accurate. Reality, however, is not as reliable.”">
+                                “The Hitchhiker’s Guide is a hundred percent accurate …
+                            </option>
                         </select>
                     </div>
-                </div>
 
+                    <button type="submit" class="btn btn-primary btn-lg">Refresh generated quotes</button>
+
+                    <details class="quote-sources">
+                        <summary class="quote-sources__headline">Show quote sources</summary>
+                        <ol id="quote-sources" class="quote-sources__list"></ol>
+                    </details>
+                </form>
+            </div>
+
+            <div class="col-md-6 col-lg-5">
                 <div class="form-group">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" name="includeSpinoff" id="includeSpinoff" value="includeSpinoff" checked class="custom-control-input">
-                        <label for="includeSpinoff" class="custom-control-label">Include “And Another Thing...” by Eoin Colfer</label>
-                    </div>
+                    <textarea name="output" id="output" rows="25" readonly class="form-control"></textarea>
                 </div>
-
                 <div class="form-group">
-                    <label for="start">Start with …</label>
-                    <select name="start" id="start" required class="custom-select">
-                        <option value="random" selected>
-                            Random
-                        </option>
-                        <option value="“Forty-two,” said Deep Thought, with infinite majesty and calm.">
-                            “Forty-two,” said Deep Thought …
-                        </option>
-                        <option value="In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move.">
-                            In the beginning the Universe was created …
-                        </option>
-                        <option value="The storm had now definitely abated, and what thunder there was now grumbled over more distant hills, like a man saying “And another thing…” twenty minutes after admitting he’d lost the argument.">
-                            The storm had now definitely abated …
-                        </option>
-                        <option value="“Life,” he said, “is like a grapefruit.”">
-                            “Life,” he said, “is like a grapefruit.”
-                        </option>
-                        <option value="A robot was programmed to believe that it liked herring sandwiches.">
-                            A robot was programmed to believe …
-                        </option>
-                        <option value="A common mistake that people make when trying to design something completely foolproof was to underestimate the ingenuity of complete fools.">
-                            A common mistake that people make …
-                        </option>
-                        <option value="At the center of an uncertain and possibly illusory universe there would always be tea.">
-                            At the center of an uncertain and possibly …
-                        </option>
-                        <option value="Dreams come true all the time, just not for the dreamers.">
-                            Dreams come true all the time …
-                        </option>
-                        <option value="“The Hitchhiker’s Guide is a hundred percent accurate. Reality, however, is not as reliable.”">
-                            “The Hitchhiker’s Guide is a hundred percent accurate …
-                        </option>
-                    </select>
+                    <button id="copy-to-clipboard" class="btn btn-primary">Copy to clipboard</button>
                 </div>
-
-                <button type="submit" class="btn btn-primary btn-lg">Refresh generated quotes</button>
-            </form>
-
-            <div class="col-md-5">
-                <textarea name="output" id="output" rows="25" readonly class="form-control w-100"></textarea>
             </div>
         </div>
     </main>
 
-
     <script src="Quotes.min.js" type="module" defer></script>
     <script src="ArrayHelpers.js" type="module" defer></script>
     <script src="main.js" type="module" defer></script>
+    <script src="clipboard.js" type="module" defer></script>
 </body>
 </html>

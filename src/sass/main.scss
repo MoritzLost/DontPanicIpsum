@@ -1,5 +1,10 @@
 // bootstrap setup
 @import "../../node_modules/bootstrap/scss/functions";
+
+// custom variables
+@import "variables";
+
+// bootstrap variables and mixins
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
@@ -43,4 +48,5 @@
 // @import "../../node_modules/bootstrap/scss/print";
 
 // custom styling
+@import "layout";
 @import "form";

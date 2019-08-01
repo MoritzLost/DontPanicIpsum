@@ -1,0 +1,23 @@
+.header {
+    @extend .pt-2, .mb-4;
+    &__headline {
+        @extend .display-3;
+    }
+    &__subline {
+        @include font-size($font-size-lg);
+    }
+}
+
+
+.quote-sources {
+    &__headline {
+        @include font-size($font-size-lg);
+        @extend .mt-4, .mb-3;
+    }
+    &__list {
+        @extend .list-unstyled;
+        li {
+            @extend .mb-2;
+        }
+    }
+}
