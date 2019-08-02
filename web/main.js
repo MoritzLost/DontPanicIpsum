@@ -85,7 +85,6 @@ const refreshQuotesDisplay = () => {
         return `<blockquote><strong>${quote}</strong><br>
             <cite>${bookTitle}, page ${page}</cite></blockquote>`;
     });
-    console.log(sourceInfo);
     sourceInfo.map(text => {
         const li = document.createElement('li');
         li.innerHTML = text;
