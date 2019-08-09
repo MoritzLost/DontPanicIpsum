@@ -1,6 +1,6 @@
 {
   "name": "dont-panic-ipsum",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A placeholder text generator using quotes from A Hitchhiker's Guide to the Galaxy.",
   "main": "index.js",
   "scripts": {
