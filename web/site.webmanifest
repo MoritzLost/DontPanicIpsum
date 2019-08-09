@@ -1,0 +1,20 @@
+{
+    "name": "Don't Panic Ipsum",
+    "short_name": "Don't Panic Ipsum",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png?v=20190809",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png?v=20190809",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#163661",
+    "background_color": "#163661",
+    "start_url": "/",
+    "display": "standalone"
+}
