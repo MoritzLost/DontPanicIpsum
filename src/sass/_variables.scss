@@ -20,6 +20,8 @@ $primary: $cyan;
 $secondary: $lime;
 $info: $blue;
 
+$yiq-contrasted-threshold:  145;
+
 $yiq-text-dark:             $black;
 
 
@@ -35,6 +37,7 @@ $enable-responsive-font-sizes:  true;
 $body-bg: $midnight;
 $body-color: $white;
 
+
 // Links
 //
 // Style anchor elements.
@@ -45,12 +48,23 @@ $link-hover-color:                        $secondary;
 $link-hover-decoration:                   underline !default;
 
 
+// Typography
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+
+
+// Buttons
+
+$btn-font-weight:             $font-weight-bold;
+
+
 // Forms
 
 $input-bg: $white;
 $input-disabled-bg: $input-bg;
 
 $input-color: $midnight;
-
 
 $form-group-margin-bottom:              1.5rem;
