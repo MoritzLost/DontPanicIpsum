@@ -6,7 +6,7 @@
 
 Since I don't have the copyrights to the quotes used, I'm not including them in the repository. However, I included my scripts that I wrote to generate the quotes data. Those are based on the highlight feature of the Amazon Kindle Paperwhite. If you have one of those, you can follow the following steps to convert your highlights into the required format.
 
-For other quote sources, make sure to follow the format in the `QuotesExample.js` file.
+For other quote sources, make sure to follow the format from the example file (`scripts/QuotesExample.js`).
 
 #### Using the scripts
 
