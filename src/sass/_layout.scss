@@ -1,5 +1,8 @@
 .header {
-    @extend .pt-2, .mb-4;
+    @extend .pt-2, .mb-3;
+    &__logo {
+        max-width: 10rem;
+    }
     &__headline {
         @extend .display-3;
     }
