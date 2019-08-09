@@ -59,6 +59,8 @@ $font-weight-bold:            700 !default;
 
 $btn-font-weight:             $font-weight-bold;
 
+$btn-transition:              color .25s ease-in-out, background-color .25s ease-in-out, border-color .25s ease-in-out, box-shadow .25s ease-in-out;
+
 
 // Forms
 
