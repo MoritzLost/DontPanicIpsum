@@ -1,3 +1,9 @@
 [build]
   command = "npm run build"
   publish = "web"
+
+[[redirects]]
+from = "https://dontpanicipsum.herebedragons.world/*"
+to = "https://dontpanicipsum.moritzlost.de/:splat"
+status = 301
+force = true
