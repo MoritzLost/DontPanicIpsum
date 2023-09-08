@@ -1,8 +1,8 @@
-import { QuotesData } from "./Quotes.min.js";
+import { QuotesData } from "./Quotes.min.js?v=1.0.0";
 import {
     randomArrayElementGroups,
     uniqueRandomArrayElementGroups,
-} from "./ArrayHelpers.js";
+} from "./ArrayHelpers.js?v=1.0.0";
 
 
 /**
