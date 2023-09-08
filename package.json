@@ -1,37 +1,39 @@
 {
-  "name": "dont-panic-ipsum",
-  "version": "1.1.0",
-  "description": "A placeholder text generator using quotes from A Hitchhiker's Guide to the Galaxy.",
-  "main": "index.js",
-  "scripts": {
-    "start": "http-server web/ -S -C cert.pem",
-    "watch": "node-sass --watch src/sass --output-style expanded --source-map true --output web",
-    "compile": "node-sass src/sass --output-style compressed --omit-source-map-url --output web",
-    "pull-quotes": "node scripts/PullQuotes.js > web/Quotes.min.js",
-    "build": "npm run pull-quotes && npm run compile",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MoritzLost/DontPanicIpsum.git"
-  },
-  "keywords": [
-    "lorem ipsum",
-    "hitchhikers guide to the galaxy",
-    "filler text",
-    "dummy text",
-    "blind text"
-  ],
-  "author": "MoritzLost <info@herebedragons.world>",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/MoritzLost/DontPanicIpsum/issues"
-  },
-  "homepage": "https://github.com/MoritzLost/DontPanicIpsum#readme",
-  "dependencies": {},
-  "devDependencies": {
-    "bootstrap": "^4.3.1",
-    "http-server": "^0.11.1",
-    "node-sass": "^4.12.0"
-  }
+    "name": "dont-panic-ipsum",
+    "version": "1.2.0",
+    "description": "A placeholder text generator using quotes from A Hitchhiker's Guide to the Galaxy.",
+    "main": "index.js",
+    "scripts": {
+        "start": "http-server web/ -S -C cert.pem",
+        "watch": "sass src/sass:web --style expanded --embed-source-map --watch",
+        "compile": "sass src/sass:web --style compressed --no-source-map",
+        "pull-quotes": "node scripts/PullQuotes.js > web/Quotes.min.js",
+        "build": "npm run pull-quotes && npm run compile"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MoritzLost/DontPanicIpsum.git"
+    },
+    "keywords": [
+        "lorem ipsum",
+        "hitchhikers guide to the galaxy",
+        "filler text",
+        "dummy text",
+        "blind text"
+    ],
+    "author": "MoritzLost <info@herebedragons.world>",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/MoritzLost/DontPanicIpsum/issues"
+    },
+    "homepage": "https://github.com/MoritzLost/DontPanicIpsum#readme",
+    "devDependencies": {
+        "bootstrap": "^4.3.1",
+        "http-server": "^0.11.1",
+        "sass": "^1.66.1"
+    },
+    "engines": {
+        "node": "^18.17.1",
+        "npm": "^10.0.0"
+    }
 }
