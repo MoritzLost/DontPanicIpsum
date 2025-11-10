@@ -45,4 +45,4 @@ There is no compile step for this project, as it's based on native ES6 modules. 
 
 Then, simply start the development server:
 
-    npm start
+    npm run start
