@@ -30,7 +30,7 @@
     "devDependencies": {
         "bootstrap": "^4.3.1",
         "http-server": "^13.1.0",
-        "sass": "^1.66.1"
+        "sass": "^1.93.3"
     },
     "engines": {
         "node": "^24.0.0",
