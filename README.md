@@ -27,19 +27,13 @@ For other quote sources, make sure to follow the format from the example file (`
 
 Just put your final quotes data file (see Generating Quotes) in the web folder. Run `npm run compile` to compile the SCSS stylesheet to CSS. Then simply upload the `web/` directory to your webroot. Done!
 
-### Netlify Deployment
+### CloudFlare Pages Deployment
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/bd56e5e1-14c5-4c2e-8f7b-bf76b563d9df/deploy-status)](https://app.netlify.com/sites/dreamy-fermi-3e44ef/deploys)
-
-The live site is deployed with netlify, the build settings are included in the `netlify.toml` file. The only thing you need to add through the netlify site settings is an environment variable pointing to the URL of a text file containing the exported quotes data (see Generating Quotes).
-
-The environment variable needs to be called `QUOTES_FILE_URL`. You can use a secret gist; make sure to set the environment variable to the URL of the raw text file, not the gist itself.
-
-During the build, netlify will run the npm script `git pull`, which will fetch the file the environment variable is pointing to and put it in the web directory as `Quotes.min.js`.
+The site is deployed through CloudFlare Pages. This requires an environment variable `QUOTES_FILE_URL` pointing to the URL of a text file containing the exported quotes data (see Generating Quotes). I use a secret gist; make sure to set the environment variable to the URL of the raw text file, not the gist itself.
 
 ## Development
 
-There is no compile step for this project, as it's based on native ES6 modules. The web root is the `web/` directory. However, if you just open up the `index.html` in the browser, the browser may refuse to load the modules because it's not loaded via https. So we still need a local development server. http-server is included as a dev-dependency. First, generate a certificate to use for SSL:
+There is no compile step for this project, as it's based on native ESM. The web root is the `web/` directory. However, if you just open up the `index.html` in the browser, the browser may refuse to load the modules because it's not loaded via https. So we still need a local development server. http-server is included as a dev-dependency. First, generate a certificate to use for SSL:
 
     openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem
 
